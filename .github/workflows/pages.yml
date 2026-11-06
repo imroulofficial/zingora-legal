@@ -1,0 +1,76 @@
+name: Legal site
+
+on:
+  push:
+    branches: [main, "claude/**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: Check required files
+        run: |
+          for f in index.html privacy-policy.html terms-and-conditions.html support.html 404.html app-ads.txt styles.css; do
+            test -s "site/$f" || { echo "::error::Missing site/$f"; exit 1; }
+          done
+
+      - name: Validate HTML
+        run: npx --yes html-validate@10 "site/**/*.html"
+
+      - name: Check internal links
+        run: |
+          status=0
+          for page in site/*.html; do
+            for href in $(grep -oE 'href="[^"#:]+"' "$page" | sed -E 's/href="([^"]+)"/\1/'); do
+              [ -e "site/$href" ] || { echo "::error file=$page::Broken link: $href"; status=1; }
+            done
+          done
+          exit $status
+
+      - name: Guard against private content
+        run: |
+          if find site -type f \( -name '*.kt' -o -name '*.kts' -o -name '*.gradle' -o -name '*.jks' -o -name '*.keystore' -o -name '*.java' \) | grep -q .; then
+            echo "::error::Source code or keystores must never be published from this repository."; exit 1
+          fi
+
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
