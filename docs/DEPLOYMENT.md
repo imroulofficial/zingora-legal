@@ -31,7 +31,13 @@ subdomain level). Sources:
 This project site serves the file at `https://imroulofficial.github.io/zingora-legal/app-ads.txt`.
 That is a sub-path, not the root of a host, so **AdMob verification is not expected to work with it**.
 
-Options (decision needed before Play release; nothing has been changed yet):
+**Status (checked November 8, 2026):** the Red Pen Studio user site already serves
+`https://imroulofficial.github.io/app-ads.txt` with exactly
+`google.com, pub-1848535996024012, DIRECT, f08c47fec0942fa0`, so option 2 below is in place. Use
+`https://imroulofficial.github.io` as the developer website in the Play listing. The copy in this
+repository (`site/app-ads.txt`) holds the same line for reference.
+
+The two options were:
 
 1. **Custom domain (recommended).** Register a domain (for example a Red Pen Studio domain), point it
    at this Pages site in **Settings → Pages → Custom domain**, and use it as the Play developer website.

@@ -1,7 +1,1 @@
-# app-ads.txt for Zingora by Red Pen Studio
-#
-# PLACEHOLDER: no authorised sellers are listed yet.
-# When the AdMob account exists, replace this comment block with the exact line
-# AdMob provides (AdMob > Apps > View all apps > app-ads.txt), which has the form:
-#   google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
-# Never guess the publisher ID.
+google.com, pub-1848535996024012, DIRECT, f08c47fec0942fa0

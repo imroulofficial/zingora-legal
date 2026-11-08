@@ -10,11 +10,11 @@ Public legal and compliance website for **Zingora** by Red Pen Studio.
 ```
 site/                         Published to GitHub Pages (this folder is the site root)
 ├── index.html                Landing page
-├── privacy-policy.html       Privacy Policy (DRAFT)
-├── terms-and-conditions.html Terms & Conditions (DRAFT)
+├── privacy-policy.html       Privacy Policy (effective November 8, 2026)
+├── terms-and-conditions.html Terms & Conditions (effective November 8, 2026)
 ├── support.html              Support and FAQ
 ├── 404.html                  Not-found page
-├── app-ads.txt               AdMob authorised sellers (PLACEHOLDER)
+├── app-ads.txt               AdMob authorised sellers (publisher pub-1848535996024012)
 ├── styles.css                Shared responsive styles (light and dark)
 └── .nojekyll                 Serve files as-is
 .github/workflows/pages.yml   Validate on every push/PR; deploy from main
@@ -27,8 +27,8 @@ docs/DEPLOYMENT.md            How deployment works and how to enable it
 | Item | Status |
 |---|---|
 | Pages and styles | Created, HTML-validated |
-| Privacy Policy / Terms | **Drafts**, with highlighted placeholders. Not final, not in effect |
-| app-ads.txt | **Placeholder**, waiting for the AdMob publisher ID |
+| Privacy Policy / Terms | **Final text**, effective November 8, 2026. No placeholders remain. The app embeds the same text (Settings > Privacy Policy / Terms) |
+| app-ads.txt | Contains `google.com, pub-1848535996024012, DIRECT, f08c47fec0942fa0` |
 | GitHub Pages | Needs a one-time switch-on in repository settings (see docs/DEPLOYMENT.md) |
 
 Expected URLs once Pages is enabled and `main` is deployed:
@@ -39,8 +39,15 @@ Expected URLs once Pages is enabled and `main` is deployed:
 - https://imroulofficial.github.io/zingora-legal/support.html
 - https://imroulofficial.github.io/zingora-legal/app-ads.txt
 
-**Important:** the `app-ads.txt` URL above will *not* satisfy AdMob, because AdMob looks for the file at
-the root of the developer website's host. See docs/DEPLOYMENT.md.
+**Important:** the `app-ads.txt` URL above will *not* satisfy AdMob on its own, because AdMob looks for the
+file at the root of the developer website's host. The host root `https://imroulofficial.github.io/app-ads.txt`
+(the Red Pen Studio user site, a separate repository) already serves the same line (checked
+November 8, 2026), so set `https://imroulofficial.github.io` as the developer website in Play Console.
+See docs/DEPLOYMENT.md.
+
+**When the app changes:** the app contains a copy of `privacy-policy.html` and
+`terms-and-conditions.html` (in the private game repository, `app/src/main/assets/legal/`). Update both
+places in the same release so the in-app text always matches this site exactly.
 
 ## Editing
 
