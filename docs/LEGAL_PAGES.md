@@ -1,31 +1,40 @@
 # Legal pages
 
-All legal text is a **draft for review**. Each page shows a draft notice, and every missing fact is
-shown as a highlighted `[PLACEHOLDER]`. Have the final text reviewed, ideally by a qualified legal
-adviser, before release.
+All placeholders were filled on November 8, 2026 (Phase I). The Privacy Policy and the Terms &
+Conditions are in effect from that date. Having the text reviewed by a qualified legal adviser is
+still recommended.
 
-## Information needed from the developer
+## Values used
 
-| Placeholder | Used in | Notes |
+| Detail | Value | Used in |
 |---|---|---|
-| Contact email | Privacy, Terms, Support | A monitored address. Also required in Play Console |
-| Postal address | Privacy | Required by some laws and by Play for some account types; confirm if needed |
-| Effective date | Privacy, Terms | Set when the documents are finalised and published |
-| Governing-law jurisdiction | Terms | Usually the country where Red Pen Studio is based |
-| Analytics / crash reporting | Privacy | Confirm whether Firebase or any other SDK will be added. The blueprint leaves this open |
-| Ad mediation partners | Privacy | None planned. List them if AdMob mediation is added |
-| AdMob publisher ID | app-ads.txt | Copy the exact line from AdMob. Never guess it |
+| Effective date | November 8, 2026 | Privacy, Terms |
+| Contact email | mdimroulhassanofficial@gmail.com | Privacy, Terms, Support |
+| Postal address | North Jaldi, Post Office: Jaldi - 4390, Banshkhali, Banshkhali Municipality, Chittagong, Bangladesh | Privacy, Terms, Support |
+| Governing law | Bangladesh, without limiting mandatory consumer-protection and privacy rights under the user's own law | Terms |
+| Developer | Red Pen Studio | All pages |
+| Analytics / crash reporting | None. The app contains no analytics SDK (owner decision) | Privacy |
+| Ad networks | Google AdMob only, no mediation partners | Privacy |
+| AdMob publisher ID | pub-1848535996024012 | app-ads.txt |
 
-## What the Privacy Policy currently states
+## What the Privacy Policy states
 
-It reflects the planned v1.0 design (Master Game Blueprint):
+It reflects the app as built (Phase I):
 
-- Offline-first, no account, no game server, progress stored only on the device.
-- Locally generated installation identifier, progress, settings: never sent to the developer.
-- Google AdMob (rewarded and limited interstitial ads, no ads during gameplay, no banners) with
-  Google's data processing linked to Google's policies.
-- Google UMP consent before ads, with privacy choices available in Settings.
+- Offline-first, no account or login, no game server, progress stored only on the device.
+- Locally generated installation identifier, progress, settings, ad frequency records and the UMP
+  consent choice: stored on the device, never sent to the developer.
+- No analytics or crash-reporting SDK.
+- Google AdMob (optional rewarded ads and occasional full-screen ads after a won level; none in levels
+  1-12, at start, during play or after a loss; no banners), advertising ID, links to Google's policies.
+- Ad requests are not child-directed and limited to teen-rated content (max ad content rating T).
+- Google UMP consent before any ad request; Settings > Privacy & Ad Preferences to change it.
 - Audience 13+, not directed at children under 13.
+- Data deletion by uninstalling or clearing the app's storage.
 
-If the app's real behaviour changes (new SDKs, analytics, accounts), the policy **must** be updated
-before release. The Play Console Data safety form must match it exactly.
+## Keep the app in step
+
+The app embeds byte-for-byte copies of `privacy-policy.html` and `terms-and-conditions.html` for its
+offline viewer. If you change either page, copy it into the game repository at
+`app/src/main/assets/legal/` in the same release. The Play Console Data safety form must also match
+the policy.
