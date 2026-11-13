@@ -25,7 +25,7 @@
   </header>
   <main id="content">
     <h1>Privacy Policy</h1>
-    <p class="meta">Zingora by Red Pen Studio &middot; Effective date: November 8, 2026 &middot; Last updated: November 8, 2026</p>
+    <p class="meta">Zingora by Red Pen Studio &middot; Effective date: November 13, 2026 &middot; Last updated: November 13, 2026</p>
 
     <h2>1. Who we are</h2>
     <p>Zingora (the &ldquo;App&rdquo;) is an offline-first puzzle game for Android developed by Red Pen Studio (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;). Red Pen Studio is responsible for the App. You can contact us at:</p>
@@ -40,6 +40,7 @@
       <li>There is no account and no login. We do not run a game server, and we do not receive your game data.</li>
       <li>Your game progress and settings are stored only on your device.</li>
       <li>The App contains no analytics or crash-reporting software. We do not track how you play.</li>
+      <li>If you allow it, the App tells Meta (Facebook) when it is installed and opened, so we can measure our Facebook and Instagram app install ads. Nothing about your gameplay is sent to Meta. Where the law requires consent, this happens only if you agree.</li>
       <li>We do not ask for your name, email address, contacts, photos, location or other personal details.</li>
       <li>The App shows ads from Google AdMob. Google uses its User Messaging Platform to ask for your consent where the law requires it, and you can change your choice at any time in <em>Settings &gt; Privacy &amp; Ad Preferences</em>.</li>
       <li>Zingora is made for players aged 13 and over.</li>
@@ -55,12 +56,13 @@
         <tr><td>Settings (sound, haptics, accessibility options)</td><td>Remember your preferences</td><td>No</td></tr>
         <tr><td>Ad frequency records (how many ads were shown today and when the last one was shown)</td><td>Keep to our limits on how often ads appear</td><td>No</td></tr>
         <tr><td>Your ad consent choice, stored by Google&rsquo;s User Messaging Platform</td><td>Remember your privacy choice so you are not asked every time</td><td>No</td></tr>
+        <tr><td>Meta&rsquo;s settings and a random app identifier created by Meta&rsquo;s software (only once Meta is allowed, see section 6)</td><td>Remember whether Meta install measurement is on, and count installs and app opens</td><td>No (sent to Meta only as described in section 6)</td></tr>
       </tbody>
     </table>
     <p>If Android backup is turned on, Android may include the App&rsquo;s save data in your Google account backup, under Google&rsquo;s own terms.</p>
 
     <h2>4. Information we collect</h2>
-    <p>We do not collect personal information through the App. We do not operate servers that receive data from the App, and the App contains no analytics, crash-reporting or tracking software of ours or of any third party. The only third-party software in the App that sends data over the internet is Google&rsquo;s advertising and consent software, described in sections 5 and 6.</p>
+    <p>We do not collect personal information through the App. We do not operate servers that receive data from the App, and the App contains no analytics or crash-reporting software. The only third-party software in the App that sends data over the internet is Google&rsquo;s advertising and consent software (sections 5 and 7) and Meta&rsquo;s install measurement software (section 6).</p>
     <p>If you email us, we receive your email address and whatever you choose to write, and we use it only to answer you.</p>
 
     <h2>5. Advertising (Google AdMob)</h2>
@@ -79,33 +81,52 @@
     <p>Our ad requests tell Google that the App is not directed at children, and limit ad content to a maximum rating suitable for teens.</p>
     <p>You can reset or delete your advertising ID, or opt out of personalised ads, in your Android device settings (for example Settings &gt; Privacy &gt; Ads, or Settings &gt; Google &gt; Ads, depending on your device).</p>
 
-    <h2>6. Consent and your ad choices</h2>
-    <p>The App uses Google&rsquo;s User Messaging Platform (UMP) to ask for your consent where the law requires it, for example in the European Economic Area, the United Kingdom and Switzerland, and to offer the privacy choices required by applicable US state privacy laws. The consent check runs before any ad is requested. If your device is offline the first time you open the App, the game starts straight away without ads, and the consent check runs the next time you open the App while online.</p>
+    <h2>6. Measuring our app install ads (Meta)</h2>
+    <p>We advertise Zingora on Facebook and Instagram. To learn which of those ads lead to installs, the App includes the core of Meta&rsquo;s software development kit (the &ldquo;Meta SDK&rdquo;, by Meta Platforms, Inc. and Meta Platforms Ireland Ltd.). It contains only Meta&rsquo;s app events part: there is no Facebook login, sharing or Meta ad network in the App, and the App sends no custom events about your gameplay.</p>
+    <p><strong>What Meta receives:</strong> when Meta is allowed (see below), the App&rsquo;s Meta SDK sends Meta:</p>
+    <ul>
+      <li>an event when the App is installed (once) and when it is opened or brought back to the screen, with the time;</li>
+      <li>your device&rsquo;s advertising ID (and whether you have limited ad tracking), and a random app identifier created by the Meta SDK;</li>
+      <li>your IP address, from which Meta can work out your approximate location;</li>
+      <li>device and app information, such as device model, operating system version, language, time zone, screen size, carrier, the App&rsquo;s version and the Google Play install referrer (which ad or link led to the install);</li>
+      <li>technical diagnostics about the Meta SDK itself, if it fails.</li>
+    </ul>
+    <p><strong>Why:</strong> only to measure and improve our app install ads (attribution: matching an install to the Facebook or Instagram ad that led to it). Meta processes this information under the <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a> and Meta&rsquo;s <a href="https://www.facebook.com/legal/terms/businesstools">Business Tools Terms</a>.</p>
+    <p><strong>When it is on:</strong> the Meta SDK starts switched off on every device, so nothing is sent to Meta until your consent choice is known.</p>
+    <ul>
+      <li>Where consent is required (for example the European Economic Area, the United Kingdom and Switzerland), Meta is turned on only if you consent in Google&rsquo;s consent message, including consent for Meta as an ad partner. If you refuse or close the message without choosing, Meta stays off.</li>
+      <li>Elsewhere, Meta is turned on after the App&rsquo;s consent check. For users in US states with privacy laws, the App always applies Meta&rsquo;s &ldquo;Limited Data Use&rdquo; option, and Meta uses your location to decide where it applies. This limits how Meta may use the data, under Meta&rsquo;s Limited Data Use terms.</li>
+      <li>If your device is offline the first time you open the App, nothing is sent to Meta until the consent check has run on a later launch.</li>
+    </ul>
+    <p><strong>How to opt out:</strong> withdraw or change your consent at any time in <em>Settings &gt; Privacy &amp; Ad Preferences</em> (where a consent choice applies); the Meta SDK then stops sending events and collecting the advertising ID. You can also reset or delete your advertising ID, or opt out of personalised ads, in your Android device settings, and manage how Meta uses information from apps in your Facebook or Instagram settings under &ldquo;Your activity off Meta technologies&rdquo; (<a href="https://www.facebook.com/off_facebook_activity">facebook.com/off_facebook_activity</a>).</p>
+
+    <h2>7. Consent and your ad choices</h2>
+    <p>The App uses Google&rsquo;s User Messaging Platform (UMP) to ask for your consent where the law requires it, for example in the European Economic Area, the United Kingdom and Switzerland, and to offer the privacy choices required by applicable US state privacy laws. The same choice also decides whether Meta install measurement is on (section 6). The consent check runs before any ad is requested and before anything is sent to Meta. If your device is offline the first time you open the App, the game starts straight away without ads and without Meta, and the consent check runs the next time you open the App while online.</p>
     <p>You can review or change your choice at any time in the App under <em>Settings &gt; Privacy &amp; Ad Preferences</em>. This option needs an internet connection. If no consent choice applies where you live, the App tells you so.</p>
     <p>Where the GDPR or UK GDPR applies, personalised ads are shown only with your consent, and you can withdraw that consent at any time in the same place.</p>
 
-    <h2>7. Internet access and permissions</h2>
-    <p>The game can be played entirely offline. The App uses the internet only to request ads and to manage consent. It requests the permissions <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> (to know whether a network is available, so it does not try to load ads while offline), plus the permissions added by Google&rsquo;s advertising software, including the advertising ID permission. The App does not ask for access to your location, contacts, camera, microphone, photos or files.</p>
+    <h2>8. Internet access and permissions</h2>
+    <p>The game can be played entirely offline. The App uses the internet only to request ads, to manage consent and, when allowed, to send install and app-open events to Meta. It requests the permissions <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> (to know whether a network is available, so it does not try to load ads while offline), plus the permissions added by Google&rsquo;s advertising software and the Meta SDK, including the advertising ID permission and Android&rsquo;s ad attribution permissions. The App may check whether the Facebook app is installed, as part of Meta&rsquo;s install measurement. The App does not ask for access to your location, contacts, camera, microphone, photos or files.</p>
 
-    <h2>8. Children</h2>
-    <p>Zingora is intended for players aged 13 and over and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided personal information to us, contact us at <a href="mailto:mdimroulhassanofficial@gmail.com">mdimroulhassanofficial@gmail.com</a> and we will delete it.</p>
+    <h2>9. Children</h2>
+    <p>Zingora is intended for players aged 13 and over and is not directed at children under 13. We do not knowingly collect personal information from children under 13. Our ad requests and Meta install measurement are not marked as directed at children. If you believe a child under 13 has provided personal information to us, contact us at <a href="mailto:mdimroulhassanofficial@gmail.com">mdimroulhassanofficial@gmail.com</a> and we will delete it.</p>
 
-    <h2>9. Data retention and deletion</h2>
-    <p>Game data on your device is kept until you delete it. You can delete all of it at any time by uninstalling the App or by clearing its storage in your device settings (Settings &gt; Apps &gt; Zingora &gt; Storage &gt; Clear storage). Because we do not hold any of your game data, there is nothing for us to delete on our side. Data processed by Google for advertising is kept according to Google&rsquo;s policies; you can manage it with Google&rsquo;s privacy tools and your device&rsquo;s ad settings.</p>
+    <h2>10. Data retention and deletion</h2>
+    <p>Game data on your device is kept until you delete it. You can delete all of it at any time by uninstalling the App or by clearing its storage in your device settings (Settings &gt; Apps &gt; Zingora &gt; Storage &gt; Clear storage). Because we do not hold any of your game data, there is nothing for us to delete on our side. Data processed by Google for advertising is kept according to Google&rsquo;s policies, and data received by Meta according to Meta&rsquo;s policies; you can manage it with Google&rsquo;s and Meta&rsquo;s privacy tools and your device&rsquo;s ad settings.</p>
 
-    <h2>10. Your rights</h2>
-    <p>Depending on where you live, you may have rights to access, correct, delete, restrict or object to the processing of your personal information, to withdraw consent, and to complain to your local data protection authority. Because we do not hold personal information about you on our own systems, most of these rights are exercised on your device as described above, and through <em>Settings &gt; Privacy &amp; Ad Preferences</em> for advertising. For data processed by Google, see Google&rsquo;s privacy tools. For any other request, contact us at <a href="mailto:mdimroulhassanofficial@gmail.com">mdimroulhassanofficial@gmail.com</a>.</p>
+    <h2>11. Your rights</h2>
+    <p>Depending on where you live, you may have rights to access, correct, delete, restrict or object to the processing of your personal information, to withdraw consent, and to complain to your local data protection authority. Because we do not hold personal information about you on our own systems, most of these rights are exercised on your device as described above, and through <em>Settings &gt; Privacy &amp; Ad Preferences</em> for advertising. For data processed by Google or Meta, use their privacy tools as described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>. For any other request, contact us at <a href="mailto:mdimroulhassanofficial@gmail.com">mdimroulhassanofficial@gmail.com</a>.</p>
 
-    <h2>11. International processing</h2>
-    <p>Red Pen Studio is based in Bangladesh. Google may process advertising data in countries other than your own, under the safeguards described in Google&rsquo;s privacy policy.</p>
+    <h2>12. International processing</h2>
+    <p>Red Pen Studio is based in Bangladesh. Google and Meta may process data in countries other than your own, including the United States, under the safeguards described in their privacy policies.</p>
 
-    <h2>12. Security</h2>
+    <h2>13. Security</h2>
     <p>Saved game data is kept in the App&rsquo;s private storage on your device and checked for corruption. No method of storage is completely secure, but the App is designed to keep as little information as possible.</p>
 
-    <h2>13. Changes to this policy</h2>
+    <h2>14. Changes to this policy</h2>
     <p>We may update this policy, for example when the App&rsquo;s features change. The latest version is always published on this page with its effective date, and the same text is included in the App under <em>Settings &gt; Privacy Policy</em>.</p>
 
-    <h2>14. Contact</h2>
+    <h2>15. Contact</h2>
     <p>Red Pen Studio &middot; <a href="mailto:mdimroulhassanofficial@gmail.com">mdimroulhassanofficial@gmail.com</a> &middot; North Jaldi, Post Office: Jaldi - 4390, Banshkhali, Banshkhali Municipality, Chittagong, Bangladesh</p>
   </main>
   <footer class="site-footer">
