@@ -10,7 +10,7 @@ Public legal and compliance website for **Zingora** by Red Pen Studio.
 ```
 site/                         Published to GitHub Pages (this folder is the site root)
 ├── index.html                Landing page
-├── privacy-policy.html       Privacy Policy (effective November 8, 2026)
+├── privacy-policy.html       Privacy Policy (effective November 13, 2026)
 ├── terms-and-conditions.html Terms & Conditions (effective November 8, 2026)
 ├── support.html              Support and FAQ
 ├── 404.html                  Not-found page
@@ -27,7 +27,7 @@ docs/DEPLOYMENT.md            How deployment works and how to enable it
 | Item | Status |
 |---|---|
 | Pages and styles | Created, HTML-validated |
-| Privacy Policy / Terms | **Final text**, effective November 8, 2026. No placeholders remain. The app embeds the same text (Settings > Privacy Policy / Terms) |
+| Privacy Policy / Terms | **Final text**: Privacy effective November 13, 2026 (Meta added), Terms November 8, 2026. No placeholders remain. The app embeds the same text (Settings > Privacy Policy / Terms) |
 | app-ads.txt | Contains `google.com, pub-1848535996024012, DIRECT, f08c47fec0942fa0` |
 | GitHub Pages | Needs a one-time switch-on in repository settings (see docs/DEPLOYMENT.md) |
 
