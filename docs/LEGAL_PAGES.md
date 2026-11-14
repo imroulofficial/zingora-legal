@@ -8,14 +8,14 @@ still recommended.
 
 | Detail | Value | Used in |
 |---|---|---|
-| Effective date | Privacy: November 13, 2026 (Meta added); Terms: November 8, 2026 | Privacy, Terms |
+| Effective date | Privacy: November 14, 2026 (Meta added Nov 13; US opt-out turns Meta off and "no analytics of how you play" wording Nov 14); Terms: November 8, 2026 | Privacy, Terms |
 | Contact email | mdimroulhassanofficial@gmail.com | Privacy, Terms, Support |
 | Postal address | North Jaldi, Post Office: Jaldi - 4390, Banshkhali, Banshkhali Municipality, Chittagong, Bangladesh | Privacy, Terms, Support |
 | Governing law | Bangladesh, without limiting mandatory consumer-protection and privacy rights under the user's own law | Terms |
 | Developer | Red Pen Studio | All pages |
 | Analytics / crash reporting | None. The app contains no analytics SDK (owner decision) | Privacy |
 | Ad networks | Google AdMob only, no mediation partners | Privacy |
-| Ad measurement | Meta (Facebook) SDK core: install and app-open events for app install ads, only when consent allows; Limited Data Use for US states (added November 13, 2026) | Privacy section 6 |
+| Ad measurement | Meta (Facebook) SDK core: install and app-open events for app install ads, only when consent allows; Limited Data Use for US states (added November 13, 2026); a US-state opt-out of sale/sharing or targeted ads turns Meta off (November 14, 2026) | Privacy section 6 |
 | AdMob publisher ID | pub-1848535996024012 | app-ads.txt |
 
 ## What the Privacy Policy states
